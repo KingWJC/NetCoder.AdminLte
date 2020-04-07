@@ -1,0 +1,50 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout_Form.cshtml";
+}
+
+<div style="padding:15px;padding-right:45px;">
+    <form id="form" class="form-horizontal" role="form">
+        <div class="form-group form-group-sm">
+            <label class="col-sm-2 control-label">生成选项</label>
+            <div class="col-sm-5">
+                <div class="checkbox checkbox-success checkbox-inline">
+                    <input type="checkbox" class="styled" id="entity" checked value="entity">
+                    <label for="entity">实体</label>
+                </div>
+                <div class="checkbox checkbox-success checkbox-inline">
+                    <input type="checkbox" class="styled" id="business" checked value="business">
+                    <label for="business">业务逻辑</label>
+                </div>
+                <div class="checkbox checkbox-success checkbox-inline">
+                    <input type="checkbox" class="styled" id="controller" checked value="controller">
+                    <label for="controller">控制器</label>
+                </div>
+                <div class="checkbox checkbox-success checkbox-inline">
+                    <input type="checkbox" class="styled" id="view" checked value="view">
+                    <label for="view">视图</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group form-group-sm">
+            <label class="col-sm-2 control-label">生成区域</label>
+            <div class="col-sm-5">
+                <input name="areaName" type="text" class="form-control" required>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <button id="submit" type="submit" class="hidden">提交</button>
+        </div>
+    </form>
+</div>
+
+@section scripts{
+    <script>
+        var linkId = request('linkId');
+        var tables = {};
+    </script>
+    <!-- page script -->
+    <script src="~/Scripts/bussiness/rapiddevelopmentform.js"></script>
+}
+
+

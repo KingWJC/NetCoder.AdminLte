@@ -1,0 +1,22 @@
+﻿using System.Data.Common;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
+
+namespace NetCode.DataRepository
+{
+    class BaseDbContext : DbContext
+    {
+        public BaseDbContext(DbConnection existingConnection, DbCompiledModel model)
+            : base(existingConnection, model, true)
+        {
+            //取消生成的非NULL判断
+            Configuration.UseDatabaseNullSemantics = true;
+        }
+
+        static BaseDbContext()
+        {
+            //数据库已手动构建，不需要自己生成初始化
+            Database.SetInitializer<BaseDbContext>(null);
+        }
+    }
+}

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AB2E05A2-7FAA-40EB-BA4B-352CAD6A054C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NetCode.Business</RootNamespace>
+    <AssemblyName>NetCode.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=9.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.9.0.0\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.4.0\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Elasticsearch.Net, Version=7.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Elasticsearch.Net.7.6.1\lib\net461\Elasticsearch.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.6.8\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.3.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.5.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq.Dynamic, Version=1.0.6132.35681, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Dynamic.1.0.7\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\BaseBusiness.T.cs" />
+    <Compile Include="Business\Base_SysManage\Base_AccessBusiness.cs" />
+    <Compile Include="Business\Base_SysManage\Base_AppSecretBusiness.cs" />
+    <Compile Include="Business\Base_SysManage\Base_RoleBusiness.cs" />
+    <Compile Include="Business\Base_SysManage\Base_UserBusiness.cs" />
+    <Compile Include="Business\Base_SysManage\MenuBusiness.cs" />
+    <Compile Include="Business\Base_SysManage\DatabaseLinkBusiness.cs" />
+    <Compile Include="Business\Base_SysManage\HomeBusiness.cs" />
+    <Compile Include="Business\Operator.cs" />
+    <Compile Include="Business\Base_SysManage\RapidDevelopmentBusiness.cs" />
+    <Compile Include="AttFilter\WriteDataLogAttribute.cs" />
+    <Compile Include="AttFilter\DataRepeatValidateAttribute.cs" />
+    <Compile Include="IBusiness\Base_SysManage\IBase_AccessBusiness.cs" />
+    <Compile Include="IBusiness\Base_SysManage\IBase_AppSecretBusiness.cs" />
+    <Compile Include="IBusiness\Base_SysManage\IBase_RoleBusiness.cs" />
+    <Compile Include="IBusiness\Base_SysManage\IBase_UserBusiness.cs" />
+    <Compile Include="IBusiness\Base_SysManage\IDatabaseLinkBusiness.cs" />
+    <Compile Include="IBusiness\Base_SysManage\IMenuBusiness.cs" />
+    <Compile Include="IBusiness\Base_SysManage\IHomeBusiness.cs" />
+    <Compile Include="IBusiness\IOperator.cs" />
+    <Compile Include="IBusiness\Base_SysManage\IRapidDevelopmentBusiness.cs" />
+    <Compile Include="IBusiness\IBaseBusiness.T.cs" />
+    <Compile Include="Logger\ILogger.cs" />
+    <Compile Include="Logger\Logger.cs" />
+    <Compile Include="Logger\LoggerConfig.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NetCode.DataRepository\NetCode.DataRepository.csproj">
+      <Project>{6d20bada-1117-4a34-8835-884f8da3d672}</Project>
+      <Name>NetCode.DataRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NetCode.Entity\NetCode.Entity.csproj">
+      <Project>{b8db7a89-2b26-4bb4-ac7b-655cd8821afa}</Project>
+      <Name>NetCode.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NetCode.Util\NetCode.Util.csproj">
+      <Project>{9b46ed5a-7d44-4e2c-b56d-d643f7f26f79}</Project>
+      <Name>NetCode.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

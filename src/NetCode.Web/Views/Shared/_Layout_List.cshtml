@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>列表</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="~/Scripts/vendor/adminlte/plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/Scripts/vendor/adminlte/dist/css/adminlte.min.css">
+    <!--bootstrap-->
+    <link href="@Url.Scrpit("~/Scripts/vendor/bootstrap/css/bootstrap.min.css")" rel="stylesheet">
+    <!--bootstrap-select-->
+    <link href="@Url.Scrpit("~/Scripts/vendor/bootstrap-select/bootstrap-select.min.css")" rel="stylesheet">
+    <!--bootstrap-table-->
+    <link href="@Url.Scrpit("~/Scripts/vendor/bootstrap-table/bootstrap-table.min.css")" rel="stylesheet">
+</head>
+<body class="hold-transition sidebar-mini">
+    @RenderBody()
+
+    <!-- jQuery -->
+    <script src="@Url.Scrpit("~/Scripts/vendor/adminlte/plugins/jquery/jquery.min.js")"></script>
+    <!--bootstrap-->
+    <script src="@Url.Scrpit("~/Scripts/vendor/bootstrap/js/bootstrap.min.js")"></script>
+    <script src="@Url.Scrpit("~/Scripts/vendor/bootstrap/js/bootstrap-BtnBuilder.js")"></script>
+    <!--bootstrap-table-->
+    <script src="@Url.Scrpit("~/Scripts/vendor/bootstrap-table/bootstrap-table.min.js")"></script>
+    <script src="@Url.Scrpit("~/Scripts/vendor/bootstrap-table/bootstrap-table-zh-CN.min.js")"></script>
+    <script src="@Url.Scrpit("~/Scripts/vendor/bootstrap-table/bootstrap-table-treegrid.js")"></script>
+    <!--layer-->
+    <script src="@Url.Scrpit("~/Scripts/vendor/layer/layer.js")"></script>
+    <script src="@Url.Scrpit("~/Scripts/vendor/layer/layer-extends.js")"></script>
+    <!--bootstrap-select-->
+    <script src="@Url.Scrpit("~/Scripts/vendor/bootstrap-select/bootstrap-select.min.js")"></script>
+    <script src="@Url.Scrpit("~/Scripts/vendor/bootstrap-select/bootstrap-select-extends.js")"></script>
+    <script src="@Url.Scrpit("~/Scripts/vendor/bootstrap-select/defaults-zh_CN.min.js")"></script>
+
+    <script src="@Url.Scrpit("~/Scripts/util.js")"></script>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

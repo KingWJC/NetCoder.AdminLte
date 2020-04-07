@@ -1,0 +1,81 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="~/Scripts/vendor/adminlte/plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/Scripts/vendor/adminlte/dist/css/adminlte.min.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+<body class="hold-transition sidebar-mini">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>介绍</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">介绍</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="callout callout-info">
+                        <h5><i class="fas fa-info"></i> Note:</h5>
+                        <p>本框架旨在极大的提高开发效率</p>
+                        <p>
+                            使用技术栈：<br />
+                            后端：采用.NET平台，ASP.NET MVC，C#语言（使用反射等高级技术），Entity Framework（数据库ORM框架）。<br />
+                            使用数据仓储模式，抽象化数据库操作(CRUD等)、支持事务处理以及分布式事务处理（跨库）<br />
+                            支持数据库读写分离、分库分表及事务(仅支持单表操作,不支持多表)
+                            全面采用Autofac作为IOC容器,面向接口编程,全面解耦<br />
+                            禁用系统Session,使用自定义Session，提高系统性能<br />
+                            集成多种工具类库以及操作拓展<br />
+                            数据库：SqlServer（框架使用简单工厂，工厂方法，抽象工厂，可轻松更换数据库）,Redis作为分布式缓存<br />
+                            前端：HTML5,JS,JQuery,Bootstrap（主要前端框架）,AdminLTE（后台模板），其中集成多种JS插件，力求方便项目开发。
+                                  并使用DotLiquid作为视图渲染引擎，与Vue开发的前端无缝连接。
+                            <br />
+                            <br />
+                            具体技术实施：<br />
+                            项目采用前后端完全分离模式，并采用严格分层模式，极大的增加聚合度，降低耦合度，<br />
+                            提高代码的健壮性，可维护性。<br />
+                            前后端通过数据接口操作数据，统一使用JSON作为数据格式，并使用默认接口签名算法保证接口的安全性。
+                            <br />
+                            <br />
+                            功能架构部分详解：<br />
+                            快速开发：此功能为框架的核心，通过选择数据库中的表，就能自动生成对应的实体层、业务逻辑层、控制器、视图，以及对应的配置，即无需编写代码即可生成基本的CRUD操作。<br />
+                            接口密钥管理：管理接口的密钥，若开启接口签名的规则，则前端需要通过给接口签名才能够正常访问后台接口。<br />
+                            权限管理：提供健全的权限管理功能，支持给系统用户、系统角色分配权限
+                            <br />
+                            <br />
+                        </p>
+                    </div>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</body>
+</html>
+

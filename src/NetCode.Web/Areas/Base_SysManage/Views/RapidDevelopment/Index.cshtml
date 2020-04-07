@@ -1,0 +1,36 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout_List.cshtml";
+}
+
+<div class="fx-content">
+    <div id="toobar">
+        <div class="btn-group btn-group-sm">
+            <button type="button" class="btn btn-default" aria-label="Left Align" onclick="javascript: location.reload();">
+                <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+                刷新
+            </button>
+        </div>
+    </div>
+    <div class="fx-wrapper">
+        <form class="form-inline" id="searchForm">
+            <div class="form-group">
+                <label class="d-inline">请选择数据库</label>
+                <select class="selectpicker" id="linkId" name="linkId" data-style="btn-default btn-sm" data-width="200px"></select>
+            </div>
+            <div class="form-group">
+                <button id="buildCode" type="button" class="btn btn-default btn-sm">
+                    <i class="glyphicon glyphicon-search"></i>
+                    生成代码
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="fx-wrapper">
+        <table id="dataTable" class="table-bordered"></table>
+    </div>
+</div>
+
+@section scripts{
+    <!-- page script -->
+    <script src="~/Scripts/bussiness/rapiddevelopmentindex.js"></script>
+}
